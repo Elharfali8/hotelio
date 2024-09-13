@@ -1,27 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* Fonts */
+
+.poppins-medium {
+  font-family: "Poppins", system-ui;
+  font-weight: 500;
+  font-style: normal;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+.poppins-semibold {
+  font-family: "Poppins", system-ui;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.poppins-bold {
+  font-family: "Poppins", system-ui;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.poppins-extrabold {
+  font-family: "Poppins", system-ui;
+  font-weight: 800;
+  font-style: normal;
+}
+
+/* ---------------- */
+
+:root {
+  --primary-color: #003366;      /* Dark Blue */
+  --accent-color: #00D9F5;       /* Bright Cyan */
+  --secondary-color: #F0F2F5;    /* Light Grey */
+  --text-color: #333333;         /* Dark Grey */
+  --background-color: #FFFFFF;   /* White */
+  --button-hover-color: #00B3CC; /* Darker Cyan */
+  --success-color: #4CAF50;      /* Green */
+  --error-color: #E74C3C;        /* Red */
+}
+
+
+
+/* Body */
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: "Poppins", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Navbar */
+.navbar {
+  background-color: var(--primary-color);
+  color: var(--background-color);
+}
+
+.navbar a {
+  color: var(--background-color);
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  color: var(--accent-color);
+}
+
+.active {
+  color: var(--accent-color);
+}
+
+/* Hero Section (Banner) */
+.hero {
+  background-color: var(--primary-color);
+  color: var(--background-color);
+  padding: 100px 0;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  color: var(--background-color);
+}
+
+.hero p {
+  font-size: 1.25rem;
+  color: var(--secondary-color);
+}
+
+/* Buttons */
+button {
+  background-color: var(--accent-color);
+  color: var(--background-color);
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--button-hover-color);
+}
+
+/* Forms (Search Bar, Input Fields) */
+input, select {
+  border: 1px solid var(--secondary-color);
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 1rem;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+input:focus, select:focus {
+  border-color: var(--accent-color);
+  outline: none;
+}
+
+/* Cards (For Hotel Listings) */
+.card {
+  background-color: var(--background-color);
+  border: 1px solid var(--secondary-color);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 10px 0;
+}
+
+.card h3 {
+  color: var(--primary-color);
+}
+
+.card p {
+  color: var(--text-color);
+}
+
+/* Footer */
+footer {
+  background-color: var(--primary-color);
+  color: var(--background-color);
+  padding: 40px 0;
+}
+
+footer a {
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: var(--button-hover-color);
+}
+
+/* Success and Error Messages */
+.success {
+  background-color: var(--success-color);
+  color: var(--background-color);
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.error {
+  background-color: var(--error-color);
+  color: var(--background-color);
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.main-container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+/* For large screens (lg) */
+@media (min-width: 1024px) {
+  .main-container {
+    padding-left: 0.5rem;  
+    padding-right: 0.5rem; 
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+/* For extra-large screens (xl) */
+@media (min-width: 1280px) {
+  .main-container {
+    padding-left: 0.25rem;  
+    padding-right: 0.25rem; 
   }
 }
