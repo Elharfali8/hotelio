@@ -1,10 +1,16 @@
+import { Featured, Hero } from "@/components"
 
 
 function HomePage() {
 
 
   return (
-    <div>HomePage</div>
+    <div className="h-[300vh] mt-20">
+      <div className="">
+        <Hero />
+        <Featured />
+      </div>
+    </div>
   )
 }
 

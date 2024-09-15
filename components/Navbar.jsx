@@ -10,7 +10,7 @@ const Navbar = ({isOpen, handleNav}) => {
   const { pathname } = useRouter();  // Extract pathname for active link styling
 
   return (
-    <nav className='navbar h-20 grid place-items-center'>
+    <nav className='fixed top-0 right-0 left-0 navbar h-20 grid place-items-center z-[99] shadow shadow-white'>
       <div className="container main-container  flex items-center justify-between">
         <Link 
           href='/' 

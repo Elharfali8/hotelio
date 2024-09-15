@@ -45,6 +45,7 @@
 
 
 
+
 /* Body */
 body {
   background-color: var(--background-color);
@@ -80,18 +81,10 @@ body {
   padding: 100px 0;
 }
 
-.hero h1 {
-  font-size: 3rem;
-  color: var(--background-color);
-}
 
-.hero p {
-  font-size: 1.25rem;
-  color: var(--secondary-color);
-}
 
 /* Buttons */
-button {
+button, .btn {
   background-color: var(--accent-color);
   color: var(--background-color);
   border: none;
@@ -102,7 +95,7 @@ button {
   transition: background-color 0.3s ease;
 }
 
-button:hover {
+button:hover,.btn:hover {
   background-color: var(--button-hover-color);
 }
 
@@ -192,3 +185,4 @@ footer a:hover {
     padding-right: 0.25rem; 
   }
 }
+
